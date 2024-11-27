@@ -1,0 +1,25 @@
+name: Permissions
+version: '${project.version}'
+main: fr.xelasflame.permissions.Permissions
+author: Xelasflame
+api-version: '1.21'
+commands:
+  bse:
+    description: Commandes relatives aux permissions
+permissions:
+  bse.admin:
+    description: Admin du serveur
+    default: false
+    children:
+      bse.moderator: true
+      bse.builder : true
+      bse.developper: true
+  bse.moderator:
+    description: Moderateur du serveur
+    default : false
+  bse.builder :
+    description: Builders
+    default: false
+  bse.developper:
+    description: Dev
+    default: false
